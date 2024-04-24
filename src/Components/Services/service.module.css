@@ -1,0 +1,123 @@
+.serviceWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(0, 200, 197, 0.1);
+  font-family: Poppins;
+  position: relative;
+}
+
+.serviceWrapper h1 {
+  font-size: 53px;
+  margin: 70px 0;
+  color: #006986;
+}
+
+.serviceHeader {
+  display: flex;
+  position: relative;
+  /* width: 500px; */
+  height: 230px;
+}
+
+.serviceTextPrimary {
+  position: absolute;
+  top: 40px;
+  right: 100%;
+
+  transform: rotate(45deg);
+  width: 7px;
+  height: 50px;
+  background-color: #006986;
+}
+
+.serviceTextPrimary1 {
+  display: flex;
+  position: absolute;
+  top: 40px;
+  left: 100%;
+  transform: rotate(-45deg);
+  width: 7px;
+  height: 50px;
+  background-color: #006986;
+}
+
+.serviceTextPrimary2 {
+  display: flex;
+  position: absolute;
+  bottom: 55px;
+  left: 100%;
+  transform: rotate(230deg);
+  width: 7px;
+  height: 50px;
+  background-color: #006986;
+}
+
+.serviceTextPrimary3 {
+  display: flex;
+  position: absolute;
+  bottom: 55px;
+  right: 100%;
+  transform: rotate(-230deg);
+  width: 7px;
+  height: 50px;
+  background-color: #006986;
+}
+
+.cardWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+}
+
+.cardContentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lines {
+  margin: 40px 0;
+}
+
+.firstCard {
+  position: absolute;
+  bottom: 52%;
+  width: 23%;
+}
+
+.secondCard {
+  position: absolute;
+  bottom: 52%;
+  width: 25%;
+  left: 40px;
+}
+
+.thirdCard {
+  position: absolute;
+  bottom: 62%;
+  width: 25%;
+}
+/* #07C9C6 */
+
+.serviceText {
+  margin-top: 21em;
+  text-align: center;
+  width: 350px;
+}
+
+.serviceText h4 {
+  font-size: 17px;
+  margin-bottom: 20px;
+  color: #324473;
+}
+
+.serviceText p {
+  line-height: 24px;
+  font-size: 15px;
+  color: #515151;
+  font-weight: 400;
+}

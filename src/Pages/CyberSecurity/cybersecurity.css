@@ -1,0 +1,240 @@
+.cyberWrapper {
+  background: linear-gradient(rgba(0, 200, 197, 0.1), rgba(0, 200, 197, 0.1));
+  font-family: Poppins;
+}
+
+/*Upper Side*/
+
+.tripleImg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftSideImg {
+  padding: 5px;
+}
+
+#bug {
+  width: 90px;
+  height: 90px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.middleSideImg {
+  position: relative;
+  display: inline-block;
+}
+
+#vector {
+  /* width: 501px; */
+  height: 312.81px;
+  /* margin-left: 40%; */
+  margin-top: 10%;
+}
+
+.securityText {
+  position: absolute;
+  top: 50%;
+  left: 90px;
+  font-weight: 600;
+  color: white;
+  font-size: 48px;
+  /* z-index: 1; */
+  text-align: center;
+  line-height: 72px;
+  /* background: none; */
+}
+
+.lastImg {
+  position: relative;
+  display: inline-block;
+  top: 40%;
+}
+
+#shape {
+  width: 100%;
+  /* margin-left: 89px; */
+  margin-top: 1px;
+  height: 100%;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 50%;
+  left: 10.4%;
+  z-index: 1;
+  /* width: 100%; */
+}
+
+.textArea {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.texts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.texts p {
+  margin-bottom: 45px;
+  width: 770px;
+  text-align: justify;
+  color: #863976;
+}
+
+.p2 {
+  margin-top: 10px;
+}
+
+.firstImg {
+  position: absolute;
+  left: 12%;
+  bottom: -5%;
+}
+
+.hybrid {
+  width: 90px;
+  margin-left: 150px;
+  margin-bottom: 60px;
+}
+
+.secondImg {
+  position: absolute;
+  right: 8%;
+  top: 78%;
+}
+
+.hyb {
+  width: 90px;
+  margin-right: 260px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+/* .buttons button {
+  width: calc(30% - 10px);
+} */
+
+/*Lower Side*/
+
+.boxes {
+  background-color: #863976;
+  border-radius: 30px;
+  width: 90%;
+  height: 761px;
+  margin: auto;
+  padding: 10px;
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+
+.boxes > h2 {
+  padding: 30px;
+  /* margin-top: 30px; */
+  text-align: center;
+  color: white;
+  font-size: 32px;
+}
+
+.threeBoxes {
+  display: flex;
+  justify-content: center;
+  color: #863976;
+}
+
+#key {
+  position: absolute;
+  bottom: -85%;
+  left: 15%;
+  width: 70px;
+}
+
+.box {
+  flex: 0 0 calc(30% - 20px);
+  width: 340px;
+  padding: 20px;
+  margin: 10px;
+  background-color: #edefe8;
+  border-radius: 20px;
+  text-align: center;
+  height: 517px;
+  margin-bottom: 56px;
+}
+
+.box img {
+  width: 259px;
+  height: 289.76px;
+}
+
+.box p {
+  font-size: 13px;
+  width: 310px;
+  line-height: 24px;
+}
+
+.Securebox h2 {
+  margin-bottom: 12px;
+}
+
+/* .boxText {
+  margin-top: 20px;
+} */
+
+.remains {
+  margin: auto;
+  text-align: center;
+}
+
+.remains h3 {
+  width: 45%;
+  margin: auto;
+  background: none;
+  color: #006986;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.others {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.remainsButton {
+  width: 15%;
+}
+
+.remainsButton > button {
+  font-size: 12px;
+  border-radius: 10px;
+}
+
+.lastly {
+  text-align: center;
+  padding: 30px;
+}
+
+.lastly img {
+  width: 70px;
+}
+
+.link {
+  text-decoration: none;
+}

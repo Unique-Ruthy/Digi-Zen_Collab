@@ -1,0 +1,237 @@
+.loginWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: url("../../../assets/userBackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: Poppins;
+  width: 100%;
+  height: 100vh;
+}
+
+.formWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 420px;
+}
+
+.formWrap {
+  width: 795px;
+  background: white;
+  color: black;
+  border-radius: 20px;
+  padding: 30px 40px;
+}
+
+.loginWrapper .imageSpace {
+  bottom: 3px;
+  font-size: 30px;
+  text-align: center;
+  color: #1a7893;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-family: Port Lligat Sans;
+}
+
+.headerLink {
+  text-decoration: none;
+}
+
+.imageStyle {
+  margin: 5px;
+  bottom: 50%;
+  width: 70px;
+}
+
+.loginWrapper .loginHeader {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333333;
+}
+.loginWrapper h2 {
+  font-size: 19px;
+  text-align: center;
+}
+
+.inputFieldWrapper {
+  width: 528px;
+  height: 315.94px;
+}
+
+.inputBox {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 35px 0;
+}
+.inputBox label {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 0;
+  color: grey;
+  font-size: medium;
+}
+.inputBox input {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  padding: 20px 45px 20px 20px;
+  border: 1px solid #666666;
+  font-size: 16px;
+}
+
+.icon {
+  position: absolute;
+  right: 20px;
+  top: 100%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: grey;
+}
+
+.rememberForgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: medium;
+  margin-bottom: 20px;
+}
+
+.rememberForgot label input {
+  accent-color: black;
+  margin-right: 10px;
+}
+
+.rememberForgot a {
+  color: black;
+  text-decoration: none;
+  font-size: medium;
+}
+
+.rememberForgot a:hover {
+  text-decoration: underline;
+}
+
+.faceBook,
+.gooGle {
+  position: relative;
+  color: blue;
+  right: 5px;
+  top: 5%;
+}
+
+.loginWrapper .registerLink {
+  font-size: medium;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.registerLink p a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.registerLink p a:hover {
+  text-decoration: underline;
+}
+
+.orLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 30px;
+}
+.wfull {
+  position: absolute;
+  width: 80%;
+  color: black;
+}
+.orText {
+  background: white;
+  z-index: 2;
+  padding: 5px;
+}
+.closeIcon {
+  position: relative;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: black;
+}
+
+.socialIco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.instructions {
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.25rem;
+  position: relative;
+  bottom: -10px;
+}
+
+.instructions > svg {
+  margin-right: 0.25rem;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+
+.labelWrapper {
+  position: relative;
+}
+
+.checksIcon {
+  margin-left: 90px;
+  position: absolute;
+}
+
+.checkIcon {
+  margin-left: 170px;
+  position: absolute;
+}
+
+.hide {
+  display: none;
+}
+
+.valid {
+  color: limegreen;
+  margin-left: 0.25rem;
+}
+
+.invalid {
+  color: red;
+  margin-left: 0.25rem;
+}
+
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.line {
+  display: inline-block;
+}

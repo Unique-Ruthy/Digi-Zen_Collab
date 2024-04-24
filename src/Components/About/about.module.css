@@ -1,0 +1,57 @@
+.aboutWrapper {
+  background-color: rgba(0, 200, 197, 0.1);
+  /* height: 100vh; */
+}
+
+.aboutWrapperMain {
+  background: linear-gradient(rgba(0, 200, 197, 0.1), rgba(0, 200, 197, 0.1)),
+    url("../../assets/aboutBackground.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 840px;
+  position: relative;
+}
+.aboutWrapperSecondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 952px;
+  height: 745px;
+  background-color: rgba(128, 47, 113, 0.9);
+  clip-path: polygon(0% 0%, 70% 0%, 100% 0%, 40% 100%, 0% 100%);
+  border-radius: 0, 0, 60px, 0;
+  transform: rotate(180deg);
+  position: absolute;
+  left: 34%;
+  bottom: 0px;
+}
+
+.aboutText1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 476.08px;
+  margin-right: 350px;
+  transform: rotate(180deg);
+}
+
+.aboutText1 h1 {
+  font-family: Poppins;
+  font-weight: 700;
+  line-height: 68.03px;
+  font-size: 45.36px;
+  text-align: center;
+  color: #fff;
+}
+
+.aboutText1 p {
+  font-family: Poppins;
+  text-align: center;
+  font-weight: 700;
+  line-height: 31.45px;
+  font-size: 20.96px;
+  color: #fff;
+  margin-bottom: 30px;
+}

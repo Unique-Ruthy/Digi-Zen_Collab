@@ -1,0 +1,57 @@
+.logoWrapper {
+  display: flex;
+  position: relative;
+  font-family: Port Lligat Sans;
+}
+
+.logoIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-left: 40px;
+}
+
+.logoNav {
+  width: 36.14px;
+  height: 36.14px;
+  animation: logo 5s linear infinite, colorChange 10s infinite alternate;
+}
+
+.logoText {
+  font-family: Port Lligat Sans;
+  font-size: 17.35px;
+  color: #000;
+  border-radius: 4px;
+}
+
+.footerLogo {
+  width: 108.4px;
+  height: 108.4px;
+  animation: logo 5s linear infinite, colorChange 10s infinite alternate;
+}
+
+.logoTextSecondary {
+  font-size: 52.04px;
+  font-weight: 400;
+  color: #fff;
+  font-family: Port Lligat Sans;
+}
+
+@keyframes logo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
