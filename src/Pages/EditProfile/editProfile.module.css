@@ -1,0 +1,271 @@
+.editWrapper {
+  background-image: url(../../assets/authenticationBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+.hybridSite{
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.totalWrapper {
+  position: relative;
+  width: 782px;
+  height: 1073px;
+  margin-left: 309px;
+  border-radius: 4px;
+  background: #e3f0e6;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.profContainer {
+  display: flex;
+  width: Hug (515px)px;
+height: Hug (85px)px;
+gap: 21px;
+opacity: 0px;
+width: 100%;
+padding-left: 42px;
+}
+
+.profContainer div.inputBox {
+  width: 50%;
+  gap: 21px;
+}
+.profContainer .age{
+  width: 18px;
+  height: 55px;
+  top: 30px;
+  border: 1px;
+}
+.profContainer .location{
+  width: 356px;
+height: 55px;
+top: 30px;
+left: 159px;
+border: 1px;
+
+}
+.profileImg {
+  width: 46.11px;
+  height: 46.11px;
+}
+
+.occupationContainer {
+  padding-left: 42px;
+}
+
+.userImage {
+  width: 120px;
+  height: 121px;
+  top: 131px;
+  left: 337px;
+}
+
+.lockImage {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  margin-bottom:120px;
+  left: 702px;
+  padding: 3.33px 5px 3.33px 5px;
+
+}
+
+.hybridImage {
+  width: 32px;
+  height: 32px;
+}
+.profIcon{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 100px;
+}
+.wheelImage {
+  position: absolute;
+  width: 49.5px;
+  height: 48.58px;
+  top: 2.21px;
+  left: 652px;
+  padding: 3.33px 5px 3.33px 5px;
+  border: 2px;
+
+}
+.totalInputBoxContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.totalInputBox{
+  width: 70%;
+}
+
+.hybridWrapper {
+  width: 32px;
+  height: 32px;
+  margin-top: 80px;
+  margin-right: 10px;
+}
+
+.hybridSite .inputBox {
+  width: 100%;
+}
+
+.inputBox label {
+ display: block;
+  color: #863976;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+
+.inputBox input {
+  display: block;
+  height: 55.02px;
+  top: 29.91px;
+  left: 0.49px;
+  border: 1px solid #863976;
+  width: 100%;
+}
+
+.interestWrapper p{
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #863976;
+  padding-left: 169px;
+}
+.interestList {
+    color: #863976;
+    padding: 30px 50px 8px 22px;
+    border-radius: 4px ;
+    border: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+   
+}
+.listWrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-left: 42px;
+}
+.interestListThree {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) ;
+  gap: 30px;
+  margin-bottom: 30px;
+  height: 50px;
+  align-items: center;
+
+}
+
+.interestListTwo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) ;
+  gap: 30px;
+  margin-bottom: 30px;
+  height: 50px;
+  align-items: center;
+
+
+}
+
+.interestLists{
+border: 1px solid #7A3272;
+
+}
+
+.cyberLists{
+  color: #ffffff;
+  background-color: #157290;
+  border: 1px solid #7A3272;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.DigitalLists{
+  color: #ffffff;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: #157290;
+  border: 1px solid #7A3272
+  
+  
+}
+.parentalLists{
+  color: #ffffff;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: #157290;
+  border: 1px solid #7A3272
+}
+
+.interestWrapper{
+  margin-top: 30px;
+  gap: 16px;
+  position: relative;
+}
+.button{
+  text-align: center;
+}
+
+.iconWrapper{
+ /* margin-right: 100%; */
+ width: 40px;
+ height: 40px;
+ border-radius: 4px;
+ color: #4E003EFC;
+}
+
+.profileWrapper {
+  position: absolute;
+  width: 166.11px;
+  height: 46.11px;
+  display: flex;
+  gap: 5px;
+  left: 450px;
+  margin-bottom: 100px;
+  padding: 3.33px 5px 3.33px 5px;
+  justify-content: center;
+ margin-bottom: 120px;
+  flex-direction:row;
+  cursor: pointer;
+  margin-left:95px;
+ 
+}
+
+.profileImg {
+  width: 46.11px;
+  height: 46.11px;
+  margin-bottom: 8px;
+  
+}
+
+.userText {
+  text-align: left;
+  font-size: 17.35px;
+  line-height: 26.02px;
+ color: #863976;
+ justify-content: center;
+ align-items: center;
+ margin-top: 10px;
+
+}

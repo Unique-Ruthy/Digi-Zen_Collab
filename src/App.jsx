@@ -77,6 +77,22 @@ const router = createBrowserRouter([
     path: "/digiCitizenship",
     element: <DigiCitizenship />,
   },
+
+  {
+    path: "/forgotPassword",
+    element: <ForgotPassword />,
+  },
+  
+  {
+    path: "/editProfile",
+    element:<EditProfile />,
+  },
+  
+  {
+    path:"/blogPage",
+    element: <BlogPage />,
+  },
+  
 ]);
 
 const App = () => {
