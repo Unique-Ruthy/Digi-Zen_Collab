@@ -1,0 +1,41 @@
+.mainStyle{
+    margin-top: 60px;
+    margin-right: 60px;
+  }
+  .totalStyle {
+    display: flex;
+    flex-direction: column;
+    background: #f8f3ff;
+    width: 413px;
+    height: 600px;
+    padding: 16.45px 4px 28.71px 17px;
+    border-radius: 4px;
+    gap: 10px;
+    align-items: center;
+  }
+  .cardImage {
+    width: 370px;
+    height: 340px;
+    border-radius: 4px;
+    rotate: 0.28;
+  }
+  .titleStyle {
+    display: grid;
+    width: 425px;
+    height: 530.82px;
+    top: 16.45px;
+    left: 20px;
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .iconStyle {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .dateStyle {
+    display: flex;
+    gap: 7px;
+  }
