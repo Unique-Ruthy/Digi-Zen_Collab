@@ -1,5 +1,6 @@
 import Button from "../Button";
 import styles from "./about.module.css";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -15,9 +16,11 @@ const About = () => {
               community today!
             </p>
 
-            <Button variant="secondary" className={styles.aboutBtn}>
-              Meet the team
-            </Button>
+            <Link to="/Aboutus" className="">
+              <Button variant="secondary" className={styles.aboutBtn}>
+                Meet the team
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

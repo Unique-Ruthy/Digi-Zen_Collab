@@ -29,7 +29,7 @@
 
 .rightSides img {
   /* position: absolute; */
-  right: 5%;
+  right: 6%;
 }
 
 #shapes {
@@ -58,17 +58,17 @@
   margin-bottom: 10px;
 }
 
-textarea {
+input {
   background-color: inherit;
-  border: 1px solid #515151;
-  height: 40px;
+  /* border: 1px solid #515151; */
+  height: 10px;
   text-align: justify;
   border-radius: 20px;
   color: #6d737a;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   width: 420px;
-  padding: 10px 10px;
-  overflow: hidden;
+  padding: 10px px;
+  /* overflow: hidden; */
   margin-bottom: 50px;
 }
 
@@ -78,7 +78,7 @@ textarea {
   background-color: #fcd883;
   border-radius: 15px;
   color: white;
-  top: 59.7%;
+  top: 59.2%;
   left: 42.8%;
   z-index: 1;
   padding: 5px;
@@ -117,7 +117,6 @@ textarea {
   justify-content: space-between;
   margin-top: 50px;
   margin-left: 70px;
-
 }
 
 .threeBoxes1 {
@@ -177,7 +176,6 @@ textarea {
   color: #863976;
   margin-left: -30px;
   text-align: center;
-
 }
 
 .boxed button {

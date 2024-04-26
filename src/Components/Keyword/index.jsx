@@ -1,46 +1,112 @@
+import React, { useState } from "react";
 import { LuSearch } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
 import "./keyword.css";
 
 const KeyWord = () => {
+
+  const [searchInput, setSearchInput] = useState("");
+
+  const [selectedKeyword, setSelectedKeyword] = useState("");
+
+
+  const handleSearchChange = (e) => {
+    setSearchInput(e.target.value);
+  };
+
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+
+    console.log("Search keyword:", searchInput);
+
+    setSearchInput("");
+  };
+
+
+  const handleCancelSearch = () => {
+
+    setSearchInput("");
+  };
+
+
+  const handleKeywordClick = (keyword) => {
+
+    console.log("Selected keyword:", keyword);
+    setSelectedKeyword(keyword);
+    // Implement your action here
+  };
+
+
+  const keywords = [
+    "children",
+    "safety",
+    "scam",
+    "digital",
+    "citizens",
+    "test",
+    "privacy",
+    "data",
+    "settings",
+    "security",
+    "gaming",
+    "attacks",
+    "device",
+    "phishing",
+    "virus",
+  ];
+
   return (
     <div className="nameWrapper">
-      <div >
+
+      <div className="searchKeywords">
         <div className="keyName">
           <p>Keywords</p>
         </div>
         <div className="searchName">
           <p>Search using keywords</p>
         </div>
-      </div>
 
-      <div className="totalIcon">
-        <button type="submit" className="searchIcon">
-          <LuSearch />
-        </button>
-        <input type="text" placeholder="texting scam" className="inputHolder" />
-        <button type="submit" className="cancelIcon">
-          <RxCross2 />
-        </button>
+        <form onSubmit={handleSearchSubmit}>
+          <div className="totalIcon">
+
+            <button type="submit" className="searchIcon">
+              <LuSearch />
+            </button>
+
+            <input
+              type="text"
+              placeholder="Search keywords"
+              className="inputHolder"
+              value={searchInput}
+              onChange={handleSearchChange}
+            />
+            {searchInput && (
+              <button
+                type="button"
+                className="cancelIcon"
+                onClick={handleCancelSearch}
+              >
+                <RxCross2 />
+              </button>
+            )}
+          </div>
+        </form>
       </div>
 
       <div className="keyWrapper">
         <ul className="keyLists">
-          <li className="keyList">children</li>
-          <li className="keyList">safety</li>
-          <li className="keyList">scam</li>
-          <li className="keyList">digital</li>
-          <li className="keyList">citizens</li>
-          <li className="keyList">test</li>
-          <li className="keyList">privacy</li>
-          <li className="keyList">data</li>
-          <li className="keyList">settings</li>
-          <li className="keyList">security</li>
-          <li className="keyList">gaming</li>
-          <li className="keyList">attacks</li>
-          <li className="keyList">device</li>
-          <li className="keyList">phishing</li>
-          <li className="keyList">virus</li>
+          {keywords.map((keyword, index) => (
+            <li
+              key={index}
+              className={`keyList ${
+                selectedKeyword === keyword ? "active" : ""
+              }`}
+              onClick={() => handleKeywordClick(keyword)}
+            >
+              {keyword}
+            </li>
+          ))}
         </ul>
       </div>
     </div>

@@ -1,66 +1,89 @@
 import "./Contact.css";
-<<<<<<< HEAD
-import React from "react";
-=======
-import React, { useState } from "react";
->>>>>>> master
-import Frame from "./images/frame.png";
-import Vector from "./images/Vector.png";
+import { useState } from "react";
+// import Frame from "./images/frame.png";
+// import mail from "./../../assets/mail.png";
 import Clip from "./images/ClipPath.png";
+import Logo from "./../../assets/digizenLogo.png";
+import { Link } from "react-router-dom";
+import { AiOutlineMail } from "react-icons/ai";
 
-const Contact = () => {
-<<<<<<< HEAD
-  return (
-    <div>
-      <div className="overallContact">
-        <div className="contact">
-=======
+const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     comments: "",
   });
-  function handleChange(event) {
-    const { name, value, type, checked } = event.target;
-    setFormData((prevFormData) => {
-      return {
-        ...prevFormData,
-        [name]: type === "checkbox" ? checked : value,
-      };
-    });
-  }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    // submitToApi(formData)
-  }
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    comments: "",
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [id]: value,
+    }));
+    // Clear error message when user starts typing
+    setErrors((prevState) => ({
+      ...prevState,
+      [id]: "",
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Form validation
+    let formIsValid = true;
+    const newErrors = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+      formIsValid = false;
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+      formIsValid = false;
+    }
+    if (!formData.comments.trim()) {
+      newErrors.comments = "Message is required";
+      formIsValid = false;
+    }
+
+    if (!formIsValid) {
+      setErrors(newErrors);
+      return;
+    }
+
+    // Perform actions like sending form data to backend here
+    console.log(formData);
+    // Optionally, you can clear the form data after submission
+    setFormData({
+      name: "",
+      email: "",
+      comments: "",
+    });
+  };
 
   return (
     <div>
       <div className="overallContact">
         <div className="contact" id="contactus">
->>>>>>> master
           <div className="formPart">
-            <div className="formPartImg">
-              <img src={Frame} alt="logo" id="logo" />
+            <Link to="/" className="contLink">
+              <div className="imageSpace">
+                <img src={Logo} alt="Digizen Logo" className="imageStyle" />
+                <p>Digizen</p>
+              </div>
+            </Link>
+            <div className="contactText">
+              <h1>Contact Us</h1>
+              <p>We want to hear from you. Feel free to reach out!</p>
             </div>
-            <h1>Contact Us</h1>
-            <p>We want to hear from you. Feel free to reach out!</p>
-<<<<<<< HEAD
-            <form action="">
-              <label htmlFor="name">
-                Name
-                <input type="text" id="name" value="name" required />
-              </label>
-              <label htmlFor="email">
-                Email Address{" "}
-                <input type="email" id="email" value="email" required />
-              </label>
-              <label htmlFor="message">
-                Message
-                <textarea id="message">Message</textarea>
-=======
-            <form onSubmit={handleSubmit}>
+            <form className="contactForm" onSubmit={handleSubmit}>
               <label htmlFor="name">
                 Name
                 <input
@@ -70,9 +93,11 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                 />
+                {errors.name && <p className="error">{errors.name}</p>}
               </label>
+
               <label htmlFor="email">
-                Email Address{" "}
+                Email Address
                 <input
                   type="email"
                   id="email"
@@ -81,29 +106,32 @@ const Contact = () => {
                   required
                 />
               </label>
+              {errors.email && <p className="error">{errors.email}</p>}
               <label htmlFor="message">
                 Message
-                <textarea 
+                <textarea
                   value={formData.comments}
                   placeholder=""
-                  id="message"
+                  id="comments"
                   onChange={handleChange}
-                  name="comments"
-                />{" "}
->>>>>>> master
+                  required
+                />
               </label>
+              {errors.comments && <p className="error">{errors.comments}</p>}
               <div className="buttonPart">
-                <button>
-                  Send{" "}
+                <button className="contactBtn">
+                  Send
                   <span className="vector">
-                    <img src={Vector} alt="Phone" />
+                    <AiOutlineMail className="img" />
+
+                    {/* <img src={mail} alt="Mail Icon" className="img" /> */}
                   </span>
                 </button>
               </div>
             </form>
           </div>
           <div className="formside">
-            <img src={Clip} alt="formside" id="formside" />
+            <img src={Clip} alt="Form Side Image" id="formside" />
           </div>
         </div>
       </div>
@@ -111,4 +139,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactPage;

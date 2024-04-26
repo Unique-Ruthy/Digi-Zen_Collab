@@ -55,6 +55,12 @@
   color: #863476;
 }
 
+
+
+.link {
+  text-decoration: none;
+}
+
 .navLogo {
   position: absolute;
   top: -49px;
@@ -65,7 +71,6 @@
   text-decoration: none;
 }
 
-
 .profileWrapper {
   width: 47.73px;
   display: flex;
@@ -74,7 +79,6 @@
   flex-direction: column;
   cursor: pointer;
   margin-right: 45px;
-  
 }
 
 .profileImg {
@@ -95,4 +99,65 @@
   font-size: 7.52px;
   line-height: 9px;
   color: #863476;
+}
+
+.hamburger {
+  display: none;
+  /* align-items: start; */
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin-top: 5px;
+  margin-left: 40px;
+}
+
+/* Media query for mobile */
+@media (max-width: 576px) {
+  .navBar {
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    background-color: #07c9c6;
+    gap: 20px;
+    padding: 13px 70px;
+    border-radius: 5px;
+    /* position: absolute; */
+    /* top: 100%;
+    left: 0;
+    right: 0; */
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navBar.open {
+    display: flex;
+    /* background-color: inherit; */
+  }
+
+  .navList {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+
+  .navLists {
+    margin-bottom: 10px;
+    border: none;
+    text-align: justify;
+  }
+
+  .hamburger {
+    display: block;
+    /* align-items: start; */
+    margin-right: 250px;
+  }
 }

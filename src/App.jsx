@@ -16,6 +16,11 @@ import Literacy from "./Pages/DigitalLiteracy/Literacy";
 import DataPrivacy from "./Pages/Data Privacy &  Protection";
 import CyberSecurity from "./Pages/CyberSecurity";
 import SocialMediaSafety from "./Pages/Social Media Safety";
+import Contact from "./Pages/ContactPage/Contact";
+import BlogPage from "./Pages/BlogPage/blogPage";
+// import EditProfile from "./Pages/EditProfile";
+import EditProfile from "./Pages/EditProfile";
+import ForgotPassword from "./Pages/forgotPage";
 
 const router = createBrowserRouter([
   {
@@ -42,16 +47,6 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/Aboutus",
-    element: <Aboutus />,
-  },
-
-  {
-    path: "/Resources",
-    element: <Resources />,
-  },
-
-  {
     path: "/DigitalCitizenship",
     element: <DigitalCitizenship />,
   },
@@ -74,6 +69,36 @@ const router = createBrowserRouter([
   {
     path: "/SocialMediaSafety",
     element: <SocialMediaSafety />,
+  },
+
+  {
+    path: "/Aboutus",
+    element: <Aboutus />,
+  },
+
+  {
+    path: "/Contact",
+    element: <Contact />,
+  },
+
+  {
+    path: "/Resources",
+    element: <Resources />,
+  },
+
+  {
+    path: "/Blog",
+    element: <BlogPage />,
+  },
+
+  {
+    path: "/EditProfile",
+    element: <EditProfile />,
+  },
+
+  {
+    path: "/ForgotPassword",
+    element: <ForgotPassword />,
   },
 ]);
 const App = () => {

@@ -34,7 +34,7 @@
   color: #515151;
   font-weight: bold;
   gap: 65.51px;
-  line-height: 20.96px;
+  border-color: none; line-height: 20.96px;
   font-size: 10.48px;
   border-radius: 5.24px;
 }

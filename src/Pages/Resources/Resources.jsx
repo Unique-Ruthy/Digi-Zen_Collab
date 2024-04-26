@@ -16,6 +16,7 @@ import Cybleft from "./../../assets/Cybleft.png";
 import Last from "./../../assets/Last.png";
 import { Nav } from "../../Components/NavBar/index";
 import Button from "../../Components/Button";
+import { Link } from "react-router-dom";
 
 const Resources = () => {
   const [textareaValue, setTextareaValue] = useState(
@@ -46,10 +47,7 @@ const Resources = () => {
                   informed.
                 </p>
                 <div className="searchPart">
-                  <textarea
-                    value={textareaValue}
-                    onChange={handleChange}
-                  ></textarea>
+                  <input value={textareaValue} onChange={handleChange}></input>
                   <img className="search" src={Magnifying} alt="Search" />
                 </div>
 
@@ -126,7 +124,10 @@ const Resources = () => {
         <div className="lower">
           <div className="lastly">
             <h2>Become a digital literate today with Digizens</h2>
-            <Button variant="catBtn">Register account</Button>
+
+            <Link to="/Register">
+              <Button variant="catBtn">Register account</Button>
+            </Link>
             <div className="openSpace"></div>
             <div className="rocklast">
               <img src={Last} alt="rockleft" id="rocklast" />

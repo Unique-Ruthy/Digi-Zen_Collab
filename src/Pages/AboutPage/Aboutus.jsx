@@ -34,6 +34,7 @@ import Temitope from "./../../assets/Temitope.png";
 import Mufidat from "./../../assets/Mufidat.png";
 import Mojolaoluwa from "./../../assets/Mojolaoluwa.png";
 import Godly from "./../../assets/Godly.png";
+import Button from "../../Components/Button";
 
 const Aboutus = () => {
   useEffect(() => {
@@ -512,9 +513,9 @@ const Aboutus = () => {
           <div className="lastly">
             <img src={Ldiamonds} alt="line&DiamondsImg" />
             <h3>Do you have any Queries?</h3>
-            <button>
-              <Link to="contactus">Contact Us</Link>
-            </button>
+            <Button variant="catBtn">
+              <Link to="/Contact">Contact Us</Link>
+            </Button>
           </div>
         </div>
       </div>

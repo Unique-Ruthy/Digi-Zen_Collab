@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Button from "../Button";
 import styles from "./navbar.module.css";
 import Logo from "../Logo";
@@ -6,13 +7,26 @@ import Navprofile from "./../../assets/Profile Circle.png";
 import profile from "../../assets/Icon Frame.png";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className={styles.navWrapper}>
       <div className={styles.maxWidth}>
         <div>
           <Logo />
         </div>
-        <div className={styles.navBar}>
+
+        <div className={styles.hamburger} onClick={toggleMenu}>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+        </div>
+
+        <div className={`${styles.navBar} ${isOpen ? styles.open : ""}`}>
           <ul className={styles.navList}>
             <li className={styles.navLists}>
               <Link to="/" className={styles.link}>
@@ -36,11 +50,11 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <Link to="/SignUpForm">
+          <Link to="/Register">
             <Button variant="tertiary">Sign Up</Button>
           </Link>
 
-          <Link to="/LoginForm">
+          <Link to="/Login">
             <Button variant="tertiary">Login</Button>
           </Link>
         </div>
@@ -50,19 +64,33 @@ const Navbar = () => {
 };
 
 export const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className={styles.navWrapper}>
       <div className={styles.maxWidth}>
         <div>
           <Logo />
         </div>
-        <div className={styles.navBar}>
+
+        <div className={styles.hamburger} onClick={toggleMenu}>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+        </div>
+
+        <div className={`${styles.navBar} ${isOpen ? styles.open : ""}`}>
           <ul className={styles.navList}>
             <li className={styles.navLists}>
               <Link to="/" className={styles.link}>
                 Home
               </Link>
             </li>
+
             <li className={styles.navLists}>
               <Link to="/Resources" className={styles.link}>
                 Resources
@@ -80,11 +108,11 @@ export const NavBar = () => {
             </li>
           </ul>
 
-          <Link to="/SignUpForm">
+          <Link to="/Register">
             <Button variant="tertiary">Sign Up</Button>
           </Link>
 
-          <Link to="/LoginForm">
+          <Link to="/Login">
             <Button variant="tertiary">Login</Button>
           </Link>
         </div>
@@ -98,13 +126,26 @@ export const NavBar = () => {
 };
 
 export const Nav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className={styles.navWrapper}>
       <div className={styles.maxWidth}>
         <div>
           <Logo />
         </div>
-        <div className={styles.navBar}>
+
+        <div className={styles.hamburger} onClick={toggleMenu}>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+        </div>
+
+        <div className={`${styles.navBar} ${isOpen ? styles.open : ""}`}>
           <ul className={styles.navList}>
             <li className={styles.navLists}>
               <Link to="/" className={styles.link}>
@@ -128,15 +169,17 @@ export const Nav = () => {
             </li>
           </ul>
 
-          <Link to="/SignUpForm">
+          <Link to="/Register">
             <Button variant="tertiary">Sign Up</Button>
           </Link>
 
-          <Link to="/LoginForm">
+          <Link to="/Login">
             <Button variant="tertiary">Login</Button>
           </Link>
         </div>
-        <div className={styles.profileWrapper}>
+        <div
+          className={`${styles.profileWrapper} ${isOpen ? styles.open : ""}`}
+        >
           <img src={Navprofile} className={styles.profileImg} />
           <p className={styles.userText2}>User Profile</p>
         </div>
