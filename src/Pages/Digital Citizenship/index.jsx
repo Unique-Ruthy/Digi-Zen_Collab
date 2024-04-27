@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
+// import React from "react";
 import "./digitalCitizenship.css";
 import { NavBar } from "../../Components/NavBar/index";
 import Footer from "../../Components/Footer/index";
@@ -20,6 +19,33 @@ import Button from "../../Components/Button";
 import { Link } from "react-router-dom";
 
 const DigiCitizenship = () => {
+  // const downloadFileAtURL = (url) => {
+  // const fileName = url.split("/").pop();
+  // const aTag = document.createElement("a");
+  // aTag.href = url;
+  // aTag.setAttribute("download", fileName);
+  // document.body.appendChild(aTag);
+  // aTag.click();
+  // aTag.remove();
+  const downloadPDF = () => {
+    const PDF_FILE = "http://localhost:5173/digital_citizenship_digizens.pdf";
+    fetch(PDF_FILE)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const url = window.URL.createObjectURL(new Blob([blob]));
+        const link = document.createElement("a");
+        link.href = url;
+        link.setAttribute("download", "digital_citizenship.pdf");
+        document.body.appendChild(link);
+        link.click();
+        link.parentNode.removeChild(link);
+      })
+      .catch((error) => {
+        console.error("Error downloading PDF:", error);
+        // Handle error gracefully, such as displaying an error message to the user
+      });
+  };
+
   return (
     <div>
       <div className="digitalCitizenshipWrapper">
@@ -72,7 +98,9 @@ const DigiCitizenship = () => {
               </div>
             </div>
             <div className="buttons">
-              <Button variant="catBtn">Download 101 Guide</Button>
+              <Button variant="catBtn" onClick={downloadPDF}>
+                Download 101 Guide
+              </Button>
               <Button variant="catBtn">Take Quiz</Button>
               <Button variant="catBtn">Blog</Button>
             </div>
