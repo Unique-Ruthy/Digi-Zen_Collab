@@ -101,7 +101,7 @@ const DigiCitizenship = () => {
               <Button variant="catBtn" onClick={downloadPDF}>
                 Download 101 Guide
               </Button>
-              <Button variant="catBtn">Take Quiz</Button>
+             <Button variant="catBtn">Take Quiz</Button>
               <Button variant="catBtn">Blog</Button>
             </div>
           </div>
