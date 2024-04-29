@@ -91,7 +91,7 @@ const Register = () => {
     try {
       const response = await axios.post(
         REGISTER_URL,
-        JSON.stringify({ user, pwd }),
+        JSON.stringify({ user, pwd, email }),
         {
           headers: { "Content-type": "application/json" },
           withCredentials: true,

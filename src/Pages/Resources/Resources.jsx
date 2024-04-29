@@ -69,17 +69,21 @@ const Resources = () => {
                         </div>
                         <div className=" boxTxt">
                           <p>Digital Citizenship</p>
-                          <button>Learn more</button>
+                          <Link to="/DigitalCitizenship" className="links">
+                            <button>Learn more</button>
+                          </Link>
                         </div>
                       </div>
-
                       <div className="boxed">
                         <div className="picSpaces"></div>
                         <div className="pic">
                           <img src={Data} alt="DataPrivacy" />
                         </div>
                         <p>Data Privacy</p>
-                        <button>Learn more</button>
+
+                        <Link to="/DataPrivacy" className="links">
+                          <button>Learn more</button>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -89,7 +93,9 @@ const Resources = () => {
                       <img src={Mobile} alt="Cybersecurity" />
                     </div>
                     <p>Cybersecurity</p>
-                    <button>Learn more</button>
+                    <Link to="/CyberSecurity" className="links">
+                      <button>Learn more</button>
+                    </Link>
                   </div>
 
                   <div className="box2">
@@ -99,8 +105,9 @@ const Resources = () => {
                         <div className="pic">
                           <img src={Thumbs} alt="SocialMediaSafety" />
                         </div>
-                        <p>Social media Safety</p>
-                        <button>Learn more</button>
+                        <Link to="/SocialMediaSafety" className="links">
+                          <button>Learn more</button>
+                        </Link>
                       </div>
 
                       <div className="boxed">
@@ -108,8 +115,11 @@ const Resources = () => {
                         <div className="pic">
                           <img src={Marketing} alt="DigitalLiteracy" />
                         </div>
+
                         <p>Digital Literacy</p>
-                        <button>Learn more</button>
+                        <Link to="/DataPrivacy" className="links">
+                          <button>Learn more</button>
+                        </Link>
                       </div>
                     </div>
                   </div>

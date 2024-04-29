@@ -19,6 +19,26 @@ import Security from "./../../assets/security.png";
 import Button from "../../Components/Button";
 import { Link } from "react-router-dom";
 
+const downloadPDF = () => {
+  const PDF_FILE = "http://localhost:5173/public/social_media.pdf";
+
+  fetch(PDF_FILE)
+    .then((response) => response.blob())
+    .then((blob) => {
+      const url = window.URL.createObjectURL(new Blob([blob]));
+      const link = document.createElement("a");
+      link.href = url;
+      link.setAttribute("download", "social_media.pdf");
+      document.body.appendChild(link);
+      link.click();
+      link.parentNode.removeChild(link);
+    })
+    .catch((error) => {
+      console.error("Error downloading PDF:", error);
+      // Handle error gracefully, such as displaying an error message to the user
+    });
+};
+
 const SocialMediaSafety = () => {
   return (
     <div>
@@ -72,9 +92,13 @@ const SocialMediaSafety = () => {
               </div>
             </div>
             <div className="buttons">
-              <Button variant="catBtn">Download 101 Guide</Button>
+              <Button variant="catBtn" onClick={downloadPDF}>
+                Download 101 Guide
+              </Button>
               <Button variant="catBtn">Take Quiz</Button>
-              <Button variant="catBtn">Blog</Button>
+              <Link to="/Blog">
+                <Button variant="catBtn">Blog</Button>
+              </Link>
             </div>
           </div>
           <div className="lowerside">

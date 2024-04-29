@@ -19,6 +19,26 @@ import Man from "./../../assets/Man talking to support chatbot.png";
 import Button from "../../Components/Button";
 import { Link } from "react-router-dom";
 
+const downloadPDF = () => {
+  const PDF_FILE = "http://localhost:5173/public/cyber_security.pdf";
+
+  fetch(PDF_FILE)
+    .then((response) => response.blob())
+    .then((blob) => {
+      const url = window.URL.createObjectURL(new Blob([blob]));
+      const link = document.createElement("a");
+      link.href = url;
+      link.setAttribute("download", "cyber_security.pdf");
+      document.body.appendChild(link);
+      link.click();
+      link.parentNode.removeChild(link);
+    })
+    .catch((error) => {
+      console.error("Error downloading PDF:", error);
+      // Handle error gracefully, such as displaying an error message to the user
+    });
+};
+
 const CyberSecurity = () => {
   return (
     <div>
@@ -72,9 +92,13 @@ const CyberSecurity = () => {
               </div>
             </div>
             <div className="buttons">
-              <Button variant="catBtn">Download 101 Guide</Button>
+              <Button variant="catBtn" onClick={downloadPDF}>
+                Download 101 Guide
+              </Button>
               <Button variant="catBtn">Take Quiz</Button>
-              <Button variant="catBtn">Blog</Button>
+              <Link to="/Blog">
+                <Button variant="catBtn">Blog</Button>
+              </Link>
             </div>
           </div>
           <div className="lowerside">

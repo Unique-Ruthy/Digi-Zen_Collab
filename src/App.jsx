@@ -21,6 +21,7 @@ import BlogPage from "./Pages/BlogPage/blogPage";
 // import EditProfile from "./Pages/EditProfile";
 import EditProfile from "./Pages/EditProfile";
 import ForgotPassword from "./Pages/forgotPage";
+import Layout from "./Components/Layout/Layout";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
     element: <LandingPage />,
   },
   // {
-  //   element: <Auth />,
+  //   element: <Layout />,
   //   children: [
   //     {
   //       path: " /LandingPage",
@@ -47,31 +48,6 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/DigitalCitizenship",
-    element: <DigitalCitizenship />,
-  },
-
-  {
-    path: "/Literacy",
-    element: <Literacy />,
-  },
-
-  {
-    path: "/DataPrivacy",
-    element: <DataPrivacy />,
-  },
-
-  {
-    path: "/CyberSecurity",
-    element: <CyberSecurity />,
-  },
-
-  {
-    path: "/SocialMediaSafety",
-    element: <SocialMediaSafety />,
-  },
-
-  {
     path: "/Aboutus",
     element: <Aboutus />,
   },
@@ -79,11 +55,6 @@ const router = createBrowserRouter([
   {
     path: "/Contact",
     element: <Contact />,
-  },
-
-  {
-    path: "/Resources",
-    element: <Resources />,
   },
 
   {
@@ -99,6 +70,41 @@ const router = createBrowserRouter([
   {
     path: "/ForgotPassword",
     element: <ForgotPassword />,
+  },
+
+  {
+    element: <Layout />,
+    children: [
+      {
+        path: "/Resources",
+        element: <Resources />,
+      },
+
+      {
+        path: "/DigitalCitizenship",
+        element: <DigitalCitizenship />,
+      },
+
+      {
+        path: "/Literacy",
+        element: <Literacy />,
+      },
+
+      {
+        path: "/DataPrivacy",
+        element: <DataPrivacy />,
+      },
+
+      {
+        path: "/CyberSecurity",
+        element: <CyberSecurity />,
+      },
+
+      {
+        path: "/SocialMediaSafety",
+        element: <SocialMediaSafety />,
+      },
+    ],
   },
 ]);
 const App = () => {
