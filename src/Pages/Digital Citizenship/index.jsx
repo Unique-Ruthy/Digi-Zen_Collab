@@ -103,10 +103,15 @@ const DigiCitizenship = () => {
               <Button variant="catBtn" onClick={downloadPDF}>
                 Download 101 Guide
               </Button>
+<<<<<<< HEAD
               <Button variant="catBtn">Take Quiz</Button>
               <Link to="/Blog">
                 <Button variant="catBtn">Blog</Button>
               </Link>
+=======
+             <Button variant="catBtn">Take Quiz</Button>
+              <Button variant="catBtn">Blog</Button>
+>>>>>>> master
             </div>
           </div>
           <div className="lowerside">
