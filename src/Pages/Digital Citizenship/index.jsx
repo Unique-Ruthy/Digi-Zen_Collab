@@ -28,7 +28,9 @@ const DigiCitizenship = () => {
   // aTag.click();
   // aTag.remove();
   const downloadPDF = () => {
-    const PDF_FILE = "http://localhost:5173/digital_citizenship_digizens.pdf";
+    const PDF_FILE =
+      "http://localhost:5173/public/digital_citizenship_digizens.pdf";
+
     fetch(PDF_FILE)
       .then((response) => response.blob())
       .then((blob) => {
@@ -101,8 +103,11 @@ const DigiCitizenship = () => {
               <Button variant="catBtn" onClick={downloadPDF}>
                 Download 101 Guide
               </Button>
-             <Button variant="catBtn">Take Quiz</Button>
-              <Button variant="catBtn">Blog</Button>
+
+              <Button variant="catBtn">Take Quiz</Button>
+              <Link to="/Blog">
+                <Button variant="catBtn">Blog</Button>
+              </Link>
             </div>
           </div>
           <div className="lowerside">

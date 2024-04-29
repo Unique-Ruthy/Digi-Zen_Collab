@@ -246,3 +246,7 @@ input {
 #rocklast {
   width: 60%;
 }
+
+.links {
+  text-decoration: none;
+}

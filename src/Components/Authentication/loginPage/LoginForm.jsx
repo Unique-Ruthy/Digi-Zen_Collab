@@ -15,7 +15,7 @@ import axios from "../../../api/axios";
 const LOGIN_URL = "/auth";
 
 const Login = () => {
-  const { setAuth } = useContext(AuthContext);
+  const { auth,setAuth } = useContext(AuthContext);
   const userRef = useRef();
   const errRef = useRef();
 
@@ -67,7 +67,7 @@ const Login = () => {
       errRef.current.focus();
     }
   };
-
+console.log(auth)
   return (
     <>
       {success ? (
